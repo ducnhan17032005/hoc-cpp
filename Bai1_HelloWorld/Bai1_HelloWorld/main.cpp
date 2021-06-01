@@ -48,9 +48,30 @@ void ex2() {
 	cout << "s bang: " << s << endl;
 }
 
+
+/// <summary>
+/// bai 3 
+/// </summary>
+void ex3() {
+	int n;
+	double s = 0;
+	// s=  1/ (1*2) + 1/ (2*3) +... + 1/ (n* (n+1))
+	cout << "n = ";
+	cin >> n;
+
+	for (int i = 1; i <= n; i++)
+	{
+		s = s + 1 / (double) (i * (i + 1));
+	}
+	cout << "s bang: " << s << endl;
+}
+
+
+
+
 int main()
 {
 	//S= 1+ 2+ 3 +4 +5 + ... + n
-	ex2(); 
+	ex3(); 
 	system("pause");
 }
