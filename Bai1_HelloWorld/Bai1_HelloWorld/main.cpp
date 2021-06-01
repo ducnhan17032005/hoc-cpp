@@ -181,7 +181,7 @@ void ex8()
 
 	for (int i = 1; i <= 24; i++)
 	{
-		if (n % i == 0) {
+		if (n % i == 0 && i % 2==1) {
 			count = count + 1;
 			cout << i << "\n";
 		}
@@ -196,11 +196,36 @@ void ex10() {
 	for (int i = 0;i <= n;i++)
 	{
 		if (i % 2 == 0) {
-			count++; //tuong duong count= count+1 va count+=1
+			count++; //tuong duong count= count+1 va cou
 		}
 	}
 }
 
+/// <summary>
+/// uoc le lon nhat 
+/// </summary>
+void ex8()
+{
+	int n = 24;
+	int max_uoc = 0; 
+
+	// i=1 => max_uoc = 1  vi (1> max_uoc hien tai)
+	// i=2 => la uoc => max_uoc =2  ( vi i=2 > max_uoc hien tai=1  => max_uoc = i =2)
+	
+	// MAX = D;
+	// A B C D E 
+
+	for (int i = 1; i <= 24; i++)
+	{
+		if (n % i == 0) {
+			if (i > max_uoc) {
+				max_uoc = i; 
+			}
+			cout << i << "\n";
+		}
+	}
+	cout << "So uoc cua 24 la: " << max_uoc << "\n";
+}
 
 
 int main()
