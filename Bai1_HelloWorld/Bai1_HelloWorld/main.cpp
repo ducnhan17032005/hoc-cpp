@@ -100,7 +100,7 @@ void ex4() {
 
 
 
-void ex5() {
+void ex100() {
 	int n;
 	double s = 0;
 	// s=  1/1 + 1/1+2 + 1/1+2+3 + .... + 1/1+2.... +n
@@ -121,26 +121,6 @@ void ex5() {
 }
 
 
-void ex5() {
-	int n;
-	double s = 0;
-	// s=  1/1 + 1/1+2 + 1/1+2+3 + .... + 1/1+2.... +n
-	cout << "n = ";
-	cin >> n;
-
-	for (int i = 1; i <= n; i++)
-	{
-		int temp = 1;
-		//tinh temp
-		for (int j = 1; j <= i; j++) {
-			temp = temp + j;
-		}
-		//
-		s = s + 1 / (double)temp;
-	}
-	cout << "s bang: " << s << endl;
-}
-
 void ex6() {
 	int n;
 	double s = 0;
@@ -151,7 +131,7 @@ void ex6() {
 	for (int i = 1; i <= n; i++)
 	{
 		int temp = 1;
-		//tinh temp
+		//tinh temp: giai thua
 		for (int j = 1; j <= i; j++) {
 			temp = temp * j;
 		}
@@ -161,7 +141,9 @@ void ex6() {
 	cout << "s bang: " << s << endl;
 }
 
-
+/// <summary>
+/// 2 vong lap long nhau; i+=2; giai thua
+/// </summary>
 void ex7() {
 	int n;
 	double s = 0;
@@ -186,11 +168,44 @@ void ex7() {
 
 
 
+void ex8()
+{
+	int n = 24;
+	int count = 0;
+	// i  = 1 la uoc => count =1 ( count +1 )
+	// i = 2 la uoc => count  = 2 (count  +1 )
+	// i=3		=> count =3 (count +1 )
+	// i=4   => count=4  (count +1 )
+	// i=5   => count = 4 
+	//i = 6 => count =5 (coutn + 1)
+
+	for (int i = 1; i <= 24; i++)
+	{
+		if (n % i == 0) {
+			count = count + 1;
+			cout << i << "\n";
+		}
+	}
+	cout << "So uoc cua 24 la: " << count << "\n";
+}
+
+void ex10() {
+	//dem tat ca so chan tu 0 -> 12
+	int n = 12;
+	int count = 0;
+	for (int i = 0;i <= n;i++)
+	{
+		if (i % 2 == 0) {
+			count++; //tuong duong count= count+1 va count+=1
+		}
+	}
+}
+
 
 
 int main()
 {
 	//S= 1+ 2+ 3 +4 +5 + ... + n
-	ex3(); 
+	ex8(); 
 	system("pause");
 }
