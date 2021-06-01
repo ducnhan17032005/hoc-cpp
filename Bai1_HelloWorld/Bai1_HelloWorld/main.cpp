@@ -51,5 +51,6 @@ void ex2() {
 int main()
 {
 	//S= 1+ 2+ 3 +4 +5 + ... + n
+	ex2(); 
 	system("pause");
 }
