@@ -1,0 +1,11 @@
+# Dong bo file tu server ve may
+git fetch
+
+
+# Lay cac thay doi 
+git add .
+
+# Commit ghi lai cac thay doi tren duoi dang 1 commit 
+git commit -m "Bai 1"
+
+git push

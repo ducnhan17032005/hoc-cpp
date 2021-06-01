@@ -1,39 +1,38 @@
 #include <iostream>
 #include <string>
 using namespace std;
-//entry point
-#include <math.h>
 
-#include<stdio.h>
-#include<conio.h>
-#include<math.h>
+
+void ex1_1() {
+	int i, n, s;
+	s = 0, i = 1;
+	cout << "n = ";
+	cin >> n;
+	while (i <= n) {
+		s = s + i;
+		i++;
+	}
+	cout << "s bang: " << s << endl;
+}
+void ex1_2() {
+	int i, n, s;
+	s = 0, i = 1;
+
+	cout << "n = ";
+	cin >> n;
+
+	for (int i = 1; i <= n; i++)
+	{
+		s = s + i;
+
+	}
+	cout << "s bang: " << s << endl;
+}
+
+
 int main()
 {
-    long themang, n;
-    int sochuso;
-
-    cout << "Nhap n: ";
-    cin >> n;
-
-    sochuso = 0;
-    themang = n;
-
-    if (n == 0)
-        sochuso = 1;
-    //n = 1234
-    //n = 123 scs  +=1 = 1
-    //n = 12  scs +=1  = 2
-    //n=1      scs +=1 =3
-    // n=0    scs +=1 =4
-    //
-    while (themang != 0)
-    {
-        sochuso = sochuso + 1;
-        themang = themang / 10;
-    }
-    printf("\nSo chu so cua %ld la %d", n, sochuso);
-
-
-    getch();
-    return 0;
+	//S= 1+ 2+ 3 +4 +5 + ... + n
+	ex1_2();
+	system("pause");
 }
