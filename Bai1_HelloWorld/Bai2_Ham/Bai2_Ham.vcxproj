@@ -141,6 +141,10 @@
   <ItemGroup>
     <ClCompile Include="Bai2_Ham.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hello_world.h" />
+    <ClInclude Include="tinhtoan.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

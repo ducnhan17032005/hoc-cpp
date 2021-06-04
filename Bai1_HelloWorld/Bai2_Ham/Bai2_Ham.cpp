@@ -1,38 +1,63 @@
+#pragma once
 #include <iostream>
-#include <string>
+#include <string> // standard : thu vien chuan
+#include "tinhtoan.h"
 using namespace std;
+//viet chuong trinh  nhap vao a b. Lua chon 4 option +, - , *, / va tinh 
+//dung ham
 
-/*
-int pow(int x, int y) {
-    //s  = 2^3 = x^y = x * x*  x* x ....*x     (y thang x nhan nhau)
-   int s = 1;
-   //s =1
-   for (int i = 0; i < y;i++) {
-       s = s * s;
-   }
-   return s;
+
+// vi du
+// Nhap so a: 2
+// Nhap so b: 3
+// Chon cong thuc tinh 1. + , 2 - , 3 * , 4 /, 0 - exit
+// In ra ket qua: Ket qua la: 5
+
+// tao file caculator.h chua 4 ham tinh + , - , *, /
+
+void menu() {
+	int choice;
+	int a;
+	int b;
+	do
+	{
+		cout << "a = ";
+		cin >> a;
+		cout << "b = ";
+		cin >> b;
+		cout << "__________tinh gia tri_________" << endl;
+		cout << "(1) a + b" << endl;
+		cout << "(2) a - b" << endl;
+		cout << "(3) a * b" << endl;
+		cout << "(4) a / b" << endl;
+		cout << "__________________________________" << endl;
+		cout << "vui long nhap choice: ";
+		cin >> choice;
+
+		switch (choice)
+	
+		{
+		case 1:
+			cout << tong(a, b) << endl;
+			break;
+		case 2:
+			cout << hieu(a, b) << endl;
+			break;
+		case 3:
+			cout << tich(a, b) << endl;
+			break;
+		case 4:
+			cout << thuong(a, b) << endl;
+			break;
+		default:
+			break;
+		}
+	} while (choice != 0);
 }
-*/
 
-//header
-void hello_world(); 
-int tong(int, int);
-
-
-
-void inHelloWorld() {
-    hello_world();
-}
-int tong(int a, int b) {
-    return a + b;
-}
-
-void hello_world() {
-    cout << "Helo World" << endl;
-}
 int main()
 {
+	menu();
 
-    inHelloWorld();
     system("pause"); 
 }
